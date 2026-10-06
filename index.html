@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cebu Pickleball Hub | Find. Book. Play.</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="#home" class="logo">
+                <span class="logo-ball">●</span>
+                <span>
+                    CEBU
+                    <strong>PICKLEBALL HUB</strong>
+                </span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="#home" class="nav-link active">Home</a>
+
+                <a href="#courts" class="nav-link">Find Courts</a>
+
+                <a href="#booking" class="nav-link">Book a Court</a>
+
+                <a href="#events" class="nav-link">Events</a>
+
+                <a href="#bookings" class="nav-link">My Bookings</a>
+
+                <a href="#about" class="nav-link">About</a>
+
+            </nav>
+
+            <button class="menu-button" id="menuButton">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="hero-small-title">
+                    CEBU'S PICKLEBALL COMMUNITY
+                </p>
+
+                <h1>
+                    FIND YOUR COURT.
+                    <br>
+                    <span>BOOK YOUR GAME.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Discover pickleball courts around Cebu,
+                    check availability, and reserve your next game
+                    in just a few clicks.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#courts" class="btn btn-primary">
+                        FIND A COURT
+                    </a>
+
+                    <a href="#booking" class="btn btn-outline">
+                        BOOK NOW
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-statistics">
+
+                <div class="stat">
+                    <strong>20+</strong>
+                    <span>COURTS</span>
+                </div>
+
+                <div class="stat">
+                    <strong>10+</strong>
+                    <span>LOCATIONS</span>
+                </div>
+
+                <div class="stat">
+                    <strong>24/7</strong>
+                    <span>ACCESS</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= QUICK SEARCH ================= -->
+
+        <section class="search-section">
+
+            <div class="search-container">
+
+                <div class="search-heading">
+
+                    <span>SEARCH</span>
+
+                    <h2>
+                        WHERE DO YOU WANT TO PLAY?
+                    </h2>
+
+                </div>
+
+                <div class="search-box">
+
+                    <div class="search-field">
+
+                        <label>LOCATION</label>
+
+                        <select id="locationFilter">
+
+                            <option value="all">
+                                All Cebu
+                            </option>
+
+                            <option value="cebu-city">
+                                Cebu City
+                            </option>
+
+                            <option value="mandaue">
+                                Mandaue
+                            </option>
+
+                            <option value="lapu-lapu">
+                                Lapu-Lapu
+                            </option>
+
+                            <option value="talisay">
+                                Talisay
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="search-field">
+
+                        <label>DATE</label>
+
+                        <input
+                            type="date"
+                            id="searchDate"
+                        >
+
+                    </div>
+
+
+                    <button
+                        class="search-button"
+                        id="searchButton"
+                    >
+                        SEARCH COURTS
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= COURTS ================= -->
+
+        <section class="courts-section" id="courts">
+
+            <div class="section-container">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            PLAYING LOCATIONS
+                        </span>
+
+                        <h2>
+                            FIND A COURT
+                        </h2>
+
+                    </div>
+
+                    <a href="#courts" class="view-all">
+                        VIEW ALL →
+                    </a>
+
+                </div>
+
+
+                <!-- Court Filters -->
+
+                <div class="court-filters">
+
+                    <button
+                        class="filter-button active"
+                        data-filter="all"
+                    >
+                        ALL
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        data-filter="cebu-city"
+                    >
+                        CEBU CITY
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        data-filter="mandaue"
+                    >
+                        MANDAUE
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        data-filter="lapu-lapu"
+                    >
+                        LAPU-LAPU
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        data-filter="talisay"
+                    >
+                        TALISAY
+                    </button>
+
+                </div>
+
+
+                <!-- Court Cards -->
+
+                <div class="court-grid" id="courtGrid">
+
+
+                    <!-- COURT 1 -->
+
+                    <article
+                        class="court-card"
+                        data-location="cebu-city"
+                    >
+
+                        <div class="court-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=900&q=80"
+                                alt="Pickleball court"
+                            >
+
+                            <span class="court-status available">
+                                AVAILABLE
+                            </span>
+
+                        </div>
+
+
+                        <div class="court-info">
+
+                            <div class="court-location">
+                                📍 Cebu City
+                            </div>
+
+                            <h3>
+                                Cebu Pickleball Hub
+                            </h3>
+
+                            <p>
+                                A modern pickleball facility
+                                located in the heart of Cebu City.
+                            </p>
+
+
+                            <div class="court-details">
+
+                                <span>
+                                    ₱200/hour
+                                </span>
+
+                                <span>
+                                    ⭐ 4.8
+                                </span>
+
+                            </div>
+
+
+                            <div class="court-actions">
+
+                                <button
+                                    class="btn-small details-button"
+                                    data-court="Cebu Pickleball Hub"
+                                >
+                                    DETAILS
+                                </button>
+
+                                <button
+                                    class="btn-small book-button"
+                                    data-court="Cebu Pickleball Hub"
+                                >
+                                    BOOK
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- COURT 2 -->
+
+                    <article
+                        class="court-card"
+                        data-location="mandaue"
+                    >
+
+                        <div class="court-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=900&q=80"
+                                alt="Sports court"
+                            >
+
+                            <span class="court-status available">
+                                AVAILABLE
+                            </span>
+
+                        </div>
+
+
+                        <div class="court-info">
+
+                            <div class="court-location">
+                                📍 Mandaue City
+                            </div>
+
+                            <h3>
+                                Mandaue Pickleball Center
+                            </h3>
+
+                            <p>
+                                Indoor courts suitable for casual
+                                games and organized matches.
+                            </p>
+
+
+                            <div class="court-details">
+
+                                <span>
+                                    ₱250/hour
+                                </span>
+
+                                <span>
+                                    ⭐ 4.7
+                                </span>
+
+                            </div>
+
+
+                            <div class="court-actions">
+
+                                <button
+                                    class="btn-small details-button"
+                                    data-court="Mandaue Pickleball Center"
+                                >
+                                    DETAILS
+                                </button>
+
+                                <button
+                                    class="btn-small book-button"
+                                    data-court="Mandaue Pickleball Center"
+                                >
+                                    BOOK
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- COURT 3 -->
+
+                    <article
+                        class="court-card"
+                        data-location="lapu-lapu"
+                    >
+
+                        <div class="court-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1534158914592-062992fbe900?auto=format&fit=crop&w=900&q=80"
+                                alt="Outdoor sports court"
+                            >
+
+                            <span class="court-status available">
+                                AVAILABLE
+                            </span>
+
+                        </div>
+
+
+                        <div class="court-info">
+
+                            <div class="court-location">
+                                📍 Lapu-Lapu City
+                            </div>
+
+                            <h3>
+                                Island Pickleball Courts
+                            </h3>
+
+                            <p>
+                                Outdoor courts with a relaxed
+                                community atmosphere.
+                            </p>
+
+
+                            <div class="court-details">
+
+                                <span>
+                                    ₱180/hour
+                                </span>
+
+                                <span>
+                                    ⭐ 4.6
+                                </span>
+
+                            </div>
+
+
+                            <div class="court-actions">
+
+                                <button
+                                    class="btn-small details-button"
+                                    data-court="Island Pickleball Courts"
+                                >
+                                    DETAILS
+                                </button>
+
+                                <button
+                                    class="btn-small book-button"
+                                    data-court="Island Pickleball Courts"
+                                >
+                                    BOOK
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HOW IT WORKS ================= -->
+
+        <section class="how-section">
+
+            <div class="section-container">
+
+                <div class="section-header centered">
+
+                    <span class="section-label">
+                        SIMPLE & FAST
+                    </span>
+
+                    <h2>
+                        HOW IT WORKS
+                    </h2>
+
+                </div>
+
+
+                <div class="steps-grid">
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            01
+                        </div>
+
+                        <h3>
+                            FIND A COURT
+                        </h3>
+
+                        <p>
+                            Search for pickleball courts
+                            based on your preferred location.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            02
+                        </div>
+
+                        <h3>
+                            CHOOSE A TIME
+                        </h3>
+
+                        <p>
+                            Select your preferred date
+                            and available playing time.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            03
+                        </div>
+
+                        <h3>
+                            BOOK YOUR GAME
+                        </h3>
+
+                        <p>
+                            Submit your booking details
+                            and get ready to play.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BOOKING ================= -->
+
+        <section class="booking-section" id="booking">
+
+            <div class="section-container">
+
+                <div class="booking-wrapper">
+
+                    <div class="booking-text">
+
+                        <span class="section-label">
+                            RESERVE YOUR COURT
+                        </span>
+
+                        <h2>
+                            READY TO
+                            <span>PLAY?</span>
+                        </h2>
+
+                        <p>
+                            Choose your court, select your schedule,
+                            and reserve your next pickleball game.
+                        </p>
+
+                    </div>
+
+
+                    <form
+                        class="booking-form"
+                        id="bookingForm"
+                    >
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label>
+                                    YOUR NAME
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="playerName"
+                                    placeholder="Enter your name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>
+                                    CONTACT NUMBER
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="playerContact"
+                                    placeholder="09XXXXXXXXX"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label>
+                                    SELECT COURT
+                                </label>
+
+                                <select
+                                    id="courtSelect"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Choose a court
+                                    </option>
+
+                                    <option>
+                                        Cebu Pickleball Hub
+                                    </option>
+
+                                    <option>
+                                        Mandaue Pickleball Center
+                                    </option>
+
+                                    <option>
+                                        Island Pickleball Courts
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>
+                                    DATE
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="bookingDate"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label>
+                                    TIME
+                                </label>
+
+                                <select
+                                    id="bookingTime"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select time
+                                    </option>
+
+                                    <option>
+                                        8:00 AM
+                                    </option>
+
+                                    <option>
+                                        10:00 AM
+                                    </option>
+
+                                    <option>
+                                        12:00 PM
+                                    </option>
+
+                                    <option>
+                                        2:00 PM
+                                    </option>
+
+                                    <option>
+                                        4:00 PM
+                                    </option>
+
+                                    <option>
+                                        6:00 PM
+                                    </option>
+
+                                    <option>
+                                        8:00 PM
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>
+                                    PLAYERS
+                                </label>
+
+                                <select
+                                    id="playerCount"
+                                    required
+                                >
+
+                                    <option>
+                                        2 Players
+                                    </option>
+
+                                    <option>
+                                        3 Players
+                                    </option>
+
+                                    <option>
+                                        4 Players
+                                    </option>
+
+                                    <option>
+                                        5+ Players
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary booking-submit"
+                        >
+                            CONFIRM BOOKING
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EVENTS ================= -->
+
+        <section class="events-section" id="events">
+
+            <div class="section-container">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            WHAT'S HAPPENING
+                        </span>
+
+                        <h2>
+                            UPCOMING EVENTS
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="events-grid">
+
+                    <article class="event-card">
+
+                        <div class="event-date">
+                            <strong>15</strong>
+                            <span>OCT</span>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                TOURNAMENT
+                            </span>
+
+                            <h3>
+                                Cebu Open Pickleball Tournament
+                            </h3>
+
+                            <p>
+                                Cebu City
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="event-card">
+
+                        <div class="event-date">
+                            <strong>22</strong>
+                            <span>OCT</span>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                COMMUNITY
+                            </span>
+
+                            <h3>
+                                Weekend Pickleball Meetup
+                            </h3>
+
+                            <p>
+                                Mandaue City
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MY BOOKINGS ================= -->
+
+        <section
+            class="bookings-section"
+            id="bookings"
+        >
+
+            <div class="section-container">
+
+                <span class="section-label">
+                    YOUR RESERVATIONS
+                </span>
+
+                <h2>
+                    MY BOOKINGS
+                </h2>
+
+                <div
+                    id="bookingList"
+                    class="booking-list"
+                >
+
+                    <div class="empty-bookings">
+
+                        <div>
+                            📅
+                        </div>
+
+                        <h3>
+                            No bookings yet
+                        </h3>
+
+                        <p>
+                            Your reservations will appear here.
+                        </p>
+
+                        <a
+                            href="#booking"
+                            class="btn btn-primary"
+                        >
+                            BOOK A COURT
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section
+            class="about-section"
+            id="about"
+        >
+
+            <div class="section-container">
+
+                <div class="about-content">
+
+                    <span class="section-label">
+                        ABOUT THE HUB
+                    </span>
+
+                    <h2>
+                        CONNECTING
+                        <span>CEBU'S</span>
+                        PICKLEBALL COMMUNITY
+                    </h2>
+
+                    <p>
+                        Cebu Pickleball Hub is designed to make
+                        finding and booking pickleball courts
+                        easier for players across Cebu.
+                    </p>
+
+                    <p>
+                        Whether you're playing casually,
+                        practicing with friends, or joining
+                        a tournament, our goal is to help you
+                        find your next game.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <div class="logo">
+                    <span class="logo-ball">●</span>
+
+                    <span>
+                        CEBU
+                        <strong>PICKLEBALL HUB</strong>
+                    </span>
+                </div>
+
+                <p>
+                    Find. Book. Play.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#home">Home</a>
+                <a href="#courts">Find Courts</a>
+                <a href="#booking">Book a Court</a>
+                <a href="#events">Events</a>
+                <a href="#about">About</a>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Cebu Pickleball Hub.
+                    All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= COURT MODAL ================= -->
+
+    <div
+        class="modal"
+        id="courtModal"
+    >
+
+        <div class="modal-content">
+
+            <button
+                class="modal-close"
+                id="modalClose"
+            >
+                ×
+            </button>
+
+            <span class="section-label">
+                COURT INFORMATION
+            </span>
+
+            <h2 id="modalCourtName">
+                Court Name
+            </h2>
+
+            <div class="modal-details">
+
+                <p>
+                    📍 <strong>Location:</strong>
+                    <span id="modalLocation"></span>
+                </p>
+
+                <p>
+                    💰 <strong>Price:</strong>
+                    <span id="modalPrice"></span>
+                </p>
+
+                <p>
+                    🕐 <strong>Operating Hours:</strong>
+                    8:00 AM – 10:00 PM
+                </p>
+
+                <p>
+                    ⭐ <strong>Rating:</strong>
+                    <span id="modalRating"></span>
+                </p>
+
+            </div>
+
+            <button
+                class="btn btn-primary"
+                id="modalBookButton"
+            >
+                BOOK THIS COURT
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
